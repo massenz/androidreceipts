@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- AlertAvert.com (c) 2011. All rights reserved.
+     Created by M. Massenzio (m.massenzio@gmail.com)
+ -->
+
+<resources>
+    <!-- Intent actions -->
+    <string name="action_take_picture">com.alertavert.receipts.take_picture</string>
+    <string name="action_show_gallery">com.alertavert.receipts.show_gallery</string>
+    <string name="extra_controller">com.alertavert.receiptscan.CONTROLLER</string>
+    <string name="extras_dao">com.alertavert.receiptscan.extras_dao</string>
+
+    <string name="app_desc">Take snapshopts of your expenses receipts and email to yourself for filing and further submission.</string>
+    <string name="app_name_visible">Android Receipts</string>
+    <string name="gallery_prompt">Edit Receipt\'s details below, changing selection will save changes.
+      Choose Upload from the menu to send them, tap on the current thumbnail for an enlarged view.</string>
+    <string name="app_name">AndroidReceipts</string>
+    <string name="app_title">Android Receipts</string>
+    <string name="send">Email Receipts</string>
+    <string name="email_prompt">your email here</string>
+    <string name="settings_invalid_msg">You need to set a valid destination first: would you like to do that now?</string>
+    <string name="no_receipts">There are no receipts images/data to send or show.  Use the \'Camera\' button to take a picture of a receipt, and then fill in the details (or leave the default ones).</string>
+
+    <string-array name="currencies">
+      <item>USD</item>
+      <item>EUR</item>
+      <item>GBP</item>
+      <item>AUD</item>
+      <item>CAD</item>
+    </string-array>
+
+    <string name="abort_msg">There was an unrecoverable error, application must close</string>
+    <string name="metadata_saved">Receipt details updated</string>
+    <string name="gallery_delete_confirm">Are you sure you want to delete this image?</string>
+    <string name="gallery_delete_clear">Are you sure you want to remove all receipts\' images?</string>
+    <string name="currency_spinner_prompt">Select a currency</string>
+    <string name="default_currency">USD</string>
+    <string name="email_lbl_name">Name</string>
+    <string name="email_lbl_timestamp">Date</string>
+    <string name="email_lbl_amount">Amount</string>
+    <string name="email_lbl_merchant">Merchant</string>
+    <string name="email_lbl_notes">Notes</string>
+    <string name="email_lbl_separator">-----------------</string>
+    <string name="email_lbl_timestamp_fmt">MMMM dd, yyyy</string>
+    <string name="receipt_date_hint">tap to edit</string>
+    <string name="receipt_name_hint">Image name</string>
+    <string name="receipt_value_hint">Amount paid</string>
+    <string name="receipt_merchant_hint">Merchant</string>
+    <string name="receipt_notes_hint">Comments (optional)</string>
+    <string name="send_success">Receipts sent successfully</string>
+
+    <!-- Failure modes and other strings for the Mail sender -->
+    <string name="sender_email_empty">Email address must be non-empty </string>
+    <string name="sender_no_receipts">No receipts available to send</string>
+    <string name="sender_email_invalid">Address %s is not a valid email</string>
+    <string name="sender_email_cannot_parse">Email address must be a valid representation of the
+        form user@domain.com. Could not validate %s</string>
+    <string name="sender_subject">Receipts</string>
+    <string name="sender_body">Attaching %d receipts</string>
+
+   <string name="no_filesystem">The SD card is not currently available: this may be due to the phone
+     being connected to a computer via the USB cable, the card having been removed, or some issue
+     with the storage system.  Please disconnect the USB cable or re-insert the card before
+     continuing, as this application will not be able to operate correctly without access to some
+     form of permanent storage.</string>
+   <string name="on_send">Sending receipts</string>
+   <string name="on_send_ok">Receipts sent</string>
+   <string name="on_send_fail">Could not send receipts to %1$s</string>
+   <string name="text_settings">Connectivity Settings</string>
+   <string name="radio_email_settings">Attach Receipts to email</string>
+   <string name="radio_server_settings">Send to Server</string>
+   <string name="action_show_settings">com.alertavert.receipts.show_settings</string>
+   <item type="string" format="string"
+   	     name="USER_SETTINGS_EXTRA">com.alertavert.android.receipts.extras.USER_PREFS</item>
+   <string name="settings_saved">Settings saved</string>
+</resources>

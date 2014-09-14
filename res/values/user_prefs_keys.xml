@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- User preferences keys and default values -->
+  <string name="PREFS">com.alertavert.android.receipts.preferences.PREFERENCES</string>
+  <string name="EMAIL">com.alertavert.android.receipts.preferences.EMAIL</string>
+  <string name="PASSWORD">com.alertavert.android.receipts.preferences.PASSWORD</string>
+  <string name="USERNAME">com.alertavert.android.receipts.preferences.USERNAME</string>
+  <string name="SERVER">com.alertavert.android.receipts.preferences.SERVER</string>
+  <string name="PORT">com.alertavert.android.receipts.preferences.PORT</string>
+  <string name="REMEMBER">com.alertavert.android.receipts.preferences.REMEMBER</string>
+  <string name="COMPRESSION_LVL">com.alertavert.android.receipts.preferences.COMPRESSION_LVL</string>
+  <string name="ACCOUNT_TYPE">com.alertavert.android.receipts.preferences.ACCOUNT_TYPE</string>
+</resources>

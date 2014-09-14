@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:layout_width="match_parent" android:id="@+id/copyrightLayout" 
+                  android:orientation="vertical" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:paddingTop="15dp">
+      <TextView android:layout_height="wrap_content" android:layout_width="fill_parent"
+                android:id="@+id/main_copyright_1" android:text="@string/main_copyright_1"
+                android:lines="1" android:gravity="center_horizontal" android:paddingBottom="3px"
+                android:paddingTop="7px" android:textColor="#aaaaee" android:layout_alignTop="@id/main_image" android:textSize="22dp" android:textStyle="bold"/>
+      <TextView android:paddingBottom="3px" android:lines="1" android:textSize="18px" android:paddingTop="7px" android:textColor="#aaaaee" android:id="@+id/main_copyright_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/main_copyright_2" android:gravity="center_horizontal"></TextView>
+    </LinearLayout>
+    <RelativeLayout android:layout_width="match_parent" android:id="@+id/relativeLayout1"
+                    android:layout_height="wrap_content">
+        <ImageButton android:layout_alignParentTop="true" android:layout_alignParentLeft="true" android:layout_marginTop="85dp" android:src="@drawable/camera_nobg" android:layout_width="100dp" android:scaleType="fitXY" android:layout_height="100dp" android:background="@drawable/a9p_09_11_00282" android:layout_marginLeft="45dp" android:id="@+id/camera_btn"></ImageButton>
+        <ImageButton android:background="@drawable/a9p_09_11_00282" android:layout_width="100dp" android:layout_height="100dp" android:scaleType="fitXY" android:src="@drawable/receipts_nobg" android:layout_marginTop="15dp" android:id="@+id/gallery_btn" android:layout_alignLeft="@id/camera_btn" android:layout_below="@id/camera_btn"></ImageButton>
+        <ImageButton android:background="@drawable/a9p_09_11_00282" android:layout_width="100dp" android:layout_height="100dp" android:scaleType="fitXY" android:src="@drawable/profile_nobg" android:layout_alignParentRight="true" android:layout_marginRight="45dp" android:id="@+id/user_btn" android:layout_alignTop="@id/camera_btn"></ImageButton>
+        <ImageButton android:background="@drawable/a9p_09_11_00282" android:layout_width="100dp" android:layout_height="100dp" android:scaleType="fitXY" android:src="@drawable/settings_nobg" android:id="@+id/settings_btn" android:layout_alignBottom="@id/gallery_btn" android:layout_alignRight="@id/user_btn"></ImageButton>
+    </RelativeLayout>
+    <LinearLayout android:layout_width="match_parent" android:id="@+id/adsbar" 
+                  android:orientation="vertical" 
+                  android:layout_gravity="bottom" android:layout_height="match_parent" android:gravity="bottom">
+        <!-- MobFox ads view -->
+        <com.mobfox.sdk.MobFoxView
+          android:id="@+id/mobFoxView"
+          android:layout_width="fill_parent"
+          android:layout_height="50dp"
+          publisherId="2fb54bfaa9dd598cc7f5ad05f4c32050">
+        </com.mobfox.sdk.MobFoxView>
+    </LinearLayout>
+    
+</LinearLayout>

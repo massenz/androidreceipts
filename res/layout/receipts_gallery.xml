@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/GalleryLayout"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+      <Gallery android:id="@+id/gallery"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:spacing="20px" android:clickable="true"/>
+      <RelativeLayout android:id="@+id/GalleryButtonsLayout" android:orientation="horizontal"
+                    android:layout_width="fill_parent" android:layout_height="wrap_content"
+                    android:paddingTop="3px" android:paddingBottom="3px">
+          <Button android:id="@+id/gallery_delete" android:text="@string/receipt_delete" 
+                  android:layout_alignParentLeft="true" style="@style/GlassButton"/>
+          <Button android:id="@+id/gallery_clear" android:text="@string/receipt_clear_all" 
+                  android:layout_toRightOf="@id/gallery_delete"
+                  android:layout_marginLeft="5dp" style="@style/GlassButton"/>
+          <Button android:id="@+id/gallery_snap" android:text="@string/receipt_snap" 
+                  android:layout_alignParentRight="true" style="@style/GlassButton"/>
+      </RelativeLayout>
+      
+    <ScrollView android:id="@+id/scrollView1" android:layout_height="wrap_content" android:layout_width="match_parent">
+      <LinearLayout android:id="@+id/ReceiptDetailsLayout" 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+          <TextView android:id="@+id/GalleryPrompt" android:text="@string/gallery_prompt"
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content"/>
+          <EditText  android:id="@+id/ReceiptNameTxt" 
+                    android:hint="@string/receipt_name_hint" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content"
+                    android:inputType="text"/>
+
+          <LinearLayout android:id="@+id/ValuePanel"
+                        android:layout_width="fill_parent" 
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+              <EditText  android:id="@+id/ReceiptValueTxt" 
+                        android:hint="@string/receipt_value_hint"
+                        android:maxLines="1"
+                        android:inputType="numberDecimal"
+                        android:layout_width="150px" 
+                        android:layout_height="wrap_content"/>
+              <Spinner  android:id="@+id/CurrenciesSpinner"
+                        android:prompt="@string/currency_spinner_prompt"
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content"/>
+          </LinearLayout> <!-- ValuePanel -->
+          
+          <LinearLayout android:id="@+id/ReceiptDateMerchantLayout"
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+              <Button android:id="@+id/ReceiptDateBtn"
+                        android:layout_marginRight="5px" 
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/> 
+              <EditText android:id="@+id/ReceiptMerchantTxt"
+                        android:hint="@string/receipt_merchant_hint"
+                        android:inputType="text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"/> 
+          </LinearLayout> <!-- ReceiptDateMerchantLayout -->
+          <EditText  android:id="@+id/ReceiptNotesTxt" 
+                     android:hint="@string/receipt_notes_hint"
+                     android:gravity="top|left"
+                     android:lines="4"
+                     android:inputType="textMultiLine"
+                     android:layout_width="fill_parent" 
+                     android:layout_height="wrap_content"/>
+      </LinearLayout> <!-- ReceiptDetailsLayout -->
+    </ScrollView>
+      <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" 
+                    android:id="@+id/adsLayout">
+         <com.mobfox.sdk.MobFoxView
+            android:id="@+id/mobFoxView"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            publisherId="2fb54bfaa9dd598cc7f5ad05f4c32050"/>
+      </LinearLayout>
+</LinearLayout> <!-- GalleryLayout -->

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent" android:id="@+id/SettingsScrollView" android:layout_height="match_parent">
+  <LinearLayout android:id="@+id/MainSettingsLayout" android:orientation="vertical"
+                android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:text="@string/text_settings" style="@style/Heading"></TextView>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/EmailSettingsLayout">
+        <RadioButton android:text="@string/radio_email_settings" android:layout_height="wrap_content" android:id="@+id/EmailSettingsRadio" android:layout_width="fill_parent" android:layout_marginLeft="10dip" android:layout_marginRight="10dip"></RadioButton>
+        <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textEmailAddress" android:hint="@string/email_settings_prompt" android:paddingLeft="10px" android:paddingRight="2px" android:id="@+id/EmailSettingsText"
+                  android:layout_marginLeft="22dip" android:layout_marginRight="10dip">
+        </EditText>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/ServerSettingsLayout">
+        <RadioButton android:layout_height="wrap_content" android:id="@+id/ServerSettingsRadio" android:text="@string/radio_server_settings" android:layout_width="fill_parent" android:layout_marginLeft="10dip" android:layout_marginRight="10dip"></RadioButton>
+        <EditText android:paddingLeft="10px" android:layout_width="match_parent" 
+                  android:paddingRight="2px" 
+                  android:layout_height="wrap_content" android:id="@+id/ServerNameText" android:hint="@string/server_name_settings_prompt" android:layout_marginLeft="22dip" android:layout_marginRight="10dip" android:lines="1" android:inputType="textNoSuggestions"></EditText>
+        <LinearLayout android:layout_width="match_parent" android:id="@+id/linearLayout1" android:layout_height="wrap_content">
+            <TextView android:id="@+id/ServerPortLbl" style="@style/SimpleText" android:text="@string/server_port_label" android:layout_marginLeft="30dp" android:layout_marginRight="10dp"></TextView>
+            <EditText android:id="@+id/port" android:inputType="number" android:layout_height="wrap_content" android:hint="@string/server_port_prompt" android:layout_width="120dp" android:selectAllOnFocus="true">
+                <requestFocus></requestFocus>
+            </EditText>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/ImageSettingsLayout" android:layout_width="match_parent"
+                  android:layout_height="wrap_content" android:orientation="vertical">
+        <TextView android:text="@string/image_settings_lbl"
+                  style="@style/Heading"></TextView>
+        <TextView android:text="@string/compression_settings_lbl" 
+                  android:layout_height="wrap_content" android:layout_width="wrap_content"
+                  style="@style/SimpleText"></TextView>
+        <SeekBar android:id="@+id/CompressionLevelBar" android:layout_height="wrap_content" android:layout_width="match_parent" 
+                 android:layout_marginLeft="33dip" android:layout_marginRight="33dip" ></SeekBar>
+        <RelativeLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/ImageCompressionLabels" android:padding="2dip">
+            <TextView android:layout_height="wrap_content" android:layout_width="wrap_content"
+                      android:text="@string/image_compression_low_lbl" 
+                      android:layout_alignParentLeft="true" style="@style/SimpleText"></TextView>
+            <TextView android:id="@+id/ImageCompressionSelectedLbl" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_centerHorizontal="true" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+            <TextView android:text="@string/image_compression_high_lbl"
+                      android:layout_alignParentRight="true" style="@style/SimpleText" android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+        </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" 
+                    android:layout_marginTop="15dip" android:id="@+id/ButtonsLayout" android:paddingBottom="15dp" android:paddingTop="30dp" android:layout_gravity="bottom">
+        <Button android:id="@+id/SettingsOkBtn" android:text="@string/dialog_ok" 
+                android:layout_alignParentRight="true" style="@style/GlassButton"></Button>
+        <Button android:id="@+id/SettingsCancelBtn" android:text="@string/dialog_cancel"
+                android:layout_toLeftOf="@id/SettingsOkBtn" style="@style/GlassButton"></Button>
+        <Button android:id="@+id/SettingsServerTestBtn" style="@style/GlassButton"
+                android:text="@string/server_test_btn"></Button>
+    </RelativeLayout>
+  </LinearLayout>
+</ScrollView>

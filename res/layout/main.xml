@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent" android:orientation="vertical">
+  
+  <ImageView android:id="@+id/main_image" android:layout_width="fill_parent" 
+             android:src="@drawable/logo" android:layout_height="fill_parent" 
+             android:layout_alignParentTop="true"/>
+
+  <TextView android:paddingBottom="3px" android:lines="1" android:gravity="center_horizontal"
+            android:paddingTop="7px" android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" android:id="@+id/main_copyright_2"
+            android:text="@string/main_copyright_2" android:textColor="#aaaaee" 
+            android:textSize="18px" android:layout_alignParentBottom="true" 
+            android:layout_alignBottom="@id/main_image"/>
+
+  <TextView android:layout_height="wrap_content" android:layout_width="fill_parent"
+            android:id="@+id/main_copyright_1" android:text="@string/main_copyright_1"
+            android:lines="1" android:gravity="center_horizontal" android:paddingBottom="3px"
+            android:paddingTop="7px" android:textColor="#aaaaee" android:textSize="18px" 
+            android:layout_alignTop="@id/main_image"/>
+
+  <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" 
+                android:id="@+id/main_buttons_panel" android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15px" android:layout_above="@id/main_copyright_2">
+    <Button android:id="@+id/camera_btn" android:text="@string/camera_btn"
+            style="@style/Button"/>
+    <Button android:id="@+id/gallery_btn" android:text="@string/gallery_btn"
+            style="@style/Button" android:layout_marginLeft="25px"/>
+  </LinearLayout>
+  
+  <!-- MobFox ads view -->
+  <com.mobfox.sdk.MobFoxView
+        android:id="@+id/mobFoxView"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        publisherId="2fb54bfaa9dd598cc7f5ad05f4c32050"/>
+  
+</RelativeLayout>

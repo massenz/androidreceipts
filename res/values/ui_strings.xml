@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!-- Settings -->
+    <string name="flash_always_on_check">Flash always On</string>
+    <string name="receipt_date_prompt">(tap to edit)</string>
+    <string name="receipt_details_ok">Save</string>
+
+<!-- Dialog box controls -->
+    <string name="dialog_yes">Yes</string>
+    <string name="dialog_ok">Ok</string>
+    <string name="dialog_no">No</string>
+    <string name="dialog_cancel">Cancel</string>
+
+    <string name="email_chooser_ok">Accept</string>
+    <string name="email_chooser_cancel">Cancel</string>
+
+<!-- Gallery View controls -->
+    <string name="receipt_clear_all">Clear all</string>
+    <string name="receipt_delete">Delete</string>
+    <string name="receipt_snap">New receipt</string>
+
+<!-- Image Preview controls -->
+    <string name="accept_btn">Continue</string>
+    <string name="cancel_btn">Discard</string>
+    <string name="accept_and_finish_btn">Accept &amp; Finish</string>
+
+<!-- Menu items -->
+    <string name="menu_home">Camera</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_upload">Upload</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_preview">Preview Image</string>
+<!-- Main menu -->
+    <string name="camera_btn">Camera</string>
+    <string name="gallery_btn">Receipts</string>
+    <string name="main_copyright_1">Android Receipt Scanner</string>
+    <string name="main_copyright_2">AlertAvert.com (c) 2010-2011</string>
+    <string name="email_settings_prompt">email address</string>
+    <string name="server_name_settings_prompt">Server Name or IP Address</string>
+    <string name="username_settings_label">Username:</string>
+    <string name="password_settings_label">Password:</string>
+    <string name="server_test_btn">Test</string>
+    <string name="server_port_label">Server port:</string>
+    <string name="remember_settings_chk">Remember me</string>
+    <string name="remember_toggle_on_label">Remember me</string>
+    <string name="remember_toggle_off_label">Enable to remember</string>
+    <string name="image_settings_lbl">Image Options</string>
+    <string name="compression_settings_lbl">Compression Level</string>
+    <string name="image_compression_low_lbl">Higher Quality</string>
+    <string name="image_compression_high_lbl">Lower Quality</string>
+    <string name="server_port_prompt">8080</string>
+</resources>

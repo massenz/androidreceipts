@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+  <LinearLayout android:id="@+id/adsLayout" android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+     <com.mobfox.sdk.MobFoxView
+        android:id="@+id/mobFoxView"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        publisherId="2fb54bfaa9dd598cc7f5ad05f4c32050"/>
+  </LinearLayout>
+  <RelativeLayout android:id="@+id/img_container" android:layout_width="wrap_content" 
+                  android:layout_height="wrap_content" android:layout_margin="1px">
+
+    <LinearLayout android:id="@+id/buttons_panel" android:layout_width="wrap_content" 
+                   android:layout_height="wrap_content" android:layout_marginTop="3px"
+                   android:layout_marginBottom="1px"
+                   android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <Button android:id="@+id/cancel_btn" android:text="@string/cancel_btn"
+                style="@style/Button" android:layout_marginRight="15px"/>
+        <Button android:id="@+id/accept_btn" android:text="@string/accept_btn" 
+                style="@style/Button"/>
+    </LinearLayout>
+                
+    <ImageView android:layout_width="fill_parent" android:id="@+id/receipt_img" 
+               android:layout_height="fill_parent"
+               android:longClickable="true"  android:layout_above="@id/buttons_panel"/>
+  </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,17 @@
+.classpath
+.idea
+.project
+.DS_Store
+.settings/
+build/
+bin/
+dist/
+gen/
+run/
+target/
+*.class
+*.tmp
+*.swp
+*.iml
+*.launch
+*.jpage

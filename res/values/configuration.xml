@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- AlertAvert.com (c) 2011. All rights reserved.
+     Created by M. Massenzio (m.massenzio@gmail.com)
+
+     This file contains all configuration strings and values that are necessary for
+     AR to be correctly configured at startup (especially at first install, before the
+     user has had any opportunity to set its preferences.
+
+     See also user_prefs_keys.xml
+ -->
+<resources>
+  <!-- The tag to be used for the DDMS Log -->
+  <item name="TAG" type="string">alertavert.receipts</item>
+
+<!-- Default connections parameters, to be used if no user preferences are set
+     These could also be used as the _sole_ connections parameters, and the
+     ability to change these values disabled (eg, in an Enterprise deployment, where
+     only the IT personnell would be able to alter these values prior to deployment).
+
+     The 'action_xxx' items represent servlet mappings in the meaning of web.xml
+     configuration parameters (servlet-mapping's url-pattern values); they ought to
+     be appended to the server's ip (or name), port and context to obtain the
+     complete URL to use to complete any given action.
+
+     action_upload
+     to upload receipts metadata and images; expects a POST and a payload
+     composed of one (and only one) ReceiptsPayload protobuf;
+
+     action_ping
+     used to test connection, a simple HEAD method, to verify the
+     connection's parameters and that the server is responding;
+
+     action_auth
+     initiated to authenticate the user and initialize a valid Token
+
+     action_account_sync
+     to retrieve user's account details and preferences
+     if a GET is used, a retrieval operation is expected, and a fully
+     populated UserSettings protobuf returned;
+     if a POST, a UserSettings proto should be sent to the server that will be
+     used to update whichever fields are present, and a fully populated protobuf
+     will be returned.
+ -->
+  <item name="server_ip" type="string">192.168.1.50</item>
+  <item name="server_port" type="integer">8080</item>
+  <item name="server_context" type="string">/ReceiptsServer</item>
+
+  <!-- Actions -->
+  <item name="action_upload" type="string">upload</item>
+  <item name="action_ping" type="string">ping</item>
+  <item name="action_auth" type="string">auth</item>
+  <item name="action_account_sync" type="string">sync_account</item>
+
+  <!-- Default value to use, if not set by the user -->
+  <item name="default_server_port" type="integer">80</item>
+
+  <!-- Image manipulation configuration values
+   -->
+  <item name="max_jpeg_compression" type="integer">9</item>
+  <item name="default_jpeg_compression" type="integer">6</item>
+</resources>

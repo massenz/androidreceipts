@@ -1,0 +1,35 @@
+<resources>
+  <style name="Button">
+         <item name="android:background">@drawable/a9p_09_11_00242</item>
+         <item name="android:textColor">#ddddff</item>
+         <item name="android:layout_width">wrap_content</item> 
+         <item name="android:layout_height">50dp</item>
+  </style>
+
+  <style name="GlassButton">
+         <item name="android:background">@drawable/a9p_09_11_00338</item>
+         <item name="android:textColor">#ddddff</item>
+         <item name="android:layout_width">wrap_content</item> 
+         <item name="android:layout_height">50dp</item>
+  </style>
+    
+  <style name="Heading">
+         <item name="android:background">@drawable/heading_bkgnd</item>
+         <item name="android:layout_marginLeft">11dip</item>
+         <item name="android:layout_marginRight">11dip</item>
+         <item name="android:layout_marginTop">35dip</item>
+         <item name="android:layout_marginBottom">20dip</item>
+         <item name="android:textColor">#aaddff</item>
+         <item name="android:layout_width">fill_parent</item> 
+         <item name="android:layout_height">wrap_content</item>
+         <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+  </style>
+  
+  <style name="SimpleText">
+         <item name="android:layout_marginLeft">5dip</item>
+         <item name="android:layout_marginRight">5dip</item>
+         <item name="android:textColor">#ddddff</item> 
+         <item name="android:layout_width">wrap_content</item> 
+         <item name="android:layout_height">wrap_content</item>
+  </style>
+</resources>

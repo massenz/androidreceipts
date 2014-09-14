@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- AlertAvert.com (c) 2011. All rights reserved.
+     Created by M. Massenzio (m.massenzio@gmail.com)
+
+     DDL TO CREATE TABLES FOR ANDROID RECEIPTS
+  -->
+<resources>
+  <!-- DDL TO CREATE TABLES -->
+  <string-array name="create_tables">
+    <item>
+      CREATE  TABLE IF NOT EXISTS RECEIPTS (
+        ID INTEGER PRIMARY KEY AUTOINCREMENT,
+        NAME TEXT UNIQUE NOT NULL,
+        <!-- BEWARE :: SQLite does NOT have a built-in DATE Type, it uses instead TEXT
+             see: sqlite-3_6_23-docs/datatype3.html
+        -->
+        EXPENSE_DATE DATE CURRENT_DATE,
+        IMG_URI TEXT NULL,
+        REPORT_ID INT NULL,
+        MONEY_AMT REAL DEFAULT 0.0,
+        CURRENCY TEXT DEFAULT \'USD\',
+        MERCHANT TEXT,
+        NOTES TEXT
+      );
+    </item>
+    <item>
+      CREATE  TABLE IF NOT EXISTS REPORTS (
+        ID INTEGER PRIMARY KEY AUTOINCREMENT,
+        NAME TEXT UNIQUE NOT NULL,
+        REPORT_DATE DATE CURRENT_DATE,
+        <!-- By rights this should be a SET(NEW, , SENT, PAID) or something similar -->
+        STATUS TEXT DEFAULT \'NEW\'
+      );
+    </item>
+  </string-array>
+
+  <!-- JUST THE TABLE NAMES, FOR EASE OF REFERENCE -->
+  <string-array name="tables">
+    <item>RECEIPTS</item>
+    <item>REPORTS</item>
+  </string-array>
+
+<!--       NOT USED CURRENTLY                                                -->
+<!--
+  ID SEQUENCE MANAGEMENT
+  This table maintains a monotically ascending sequence to use as ID for PKs
+  <string name="sequence_id_table_create">
+      CREATE TABLE IF NOT EXISTS ID_SEQUENCE (
+        NEXT_ID INTEGER
+      );
+  </string>
+  <string name="get_id">SELECT NEXT_ID FROM ID_SEQUENCE LIMIT 1;</string>
+  <string name="set_id">UPDATE ID_SEQUENCE SET NEXT_ID=?;</string>
+-->
+
+  <!--  SELECT STATEMENTS FOR THE DAO -->
+  <string name="link_receipt_report">
+    NOT IMPLEMENTED
+  </string>
+  <string name="find_by_id">
+    SELECT ID, NAME, EXPENSE_DATE, MONEY_AMT, CURRENCY, MERCHANT, NOTES, IMG_URI FROM RECEIPTS WHERE ID=?;
+  </string>
+  <string name="find_by_name">
+    SELECT ID FROM RECEIPTS WHERE NAME=?;
+  </string>
+  <string name="find_all">
+    SELECT ID FROM RECEIPTS;
+  </string>
+  <string name="delete_by_id">
+    DELETE FROM RECEIPTS WHERE ID=?;
+  </string>
+
+  <!-- REPLACE actually stands for INSERT OR REPLACE -->
+  <string name="insert_receipt">
+    REPLACE INTO RECEIPTS (NAME, EXPENSE_DATE, IMG_URI, MONEY_AMT, CURRENCY, MERCHANT, NOTES)
+        VALUES (?, ?, ?, ?, ?, ?, ?);
+  </string>
+
+  <!--
+    This query will update the receipt whose ID equals the passed in ID value.
+    Note the syntactical inconsistency with the REPLACE statement above: apparently,
+    SQLite does have different syntaxes for these statements
+  -->
+  <string name="update_by_id">
+    UPDATE OR IGNORE RECEIPTS SET NAME=?, EXPENSE_DATE=?, IMG_URI=?,
+        MONEY_AMT=?, CURRENCY=?, MERCHANT=?, NOTES=?
+        WHERE ID=?;
+  </string>
+</resources>
